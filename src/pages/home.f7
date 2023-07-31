@@ -1,0 +1,32 @@
+<template>
+  <div class="page" data-name="home">
+    <!-- Top Navbar -->
+    <div class="navbar navbar-large">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="title">ffvolley-news</div>
+        <div class="title-large">
+          <div class="title-large-text">ffvolley-news</div>
+        </div>
+      </div>
+    </div>
+    <!-- Toolbar
+    <div class="toolbar toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="#" class="link">Left Link</a>
+        <a href="#" class="link">Right Link</a>
+      </div>
+    </div> -->
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      
+    </div>
+  </div>
+</template>
+<script>
+export default (props, { $f7 }) => {
+  $f7.preloader.show();
+
+  return $render;
+}
+</script>

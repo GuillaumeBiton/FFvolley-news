@@ -1,0 +1,19 @@
+{
+  "cwd": "/workspaces/FFvolley-news",
+  "type": [
+    "pwa",
+    "web"
+  ],
+  "name": "ffvolley-news",
+  "framework": "core",
+  "template": "blank",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
