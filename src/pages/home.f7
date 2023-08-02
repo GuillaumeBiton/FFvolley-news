@@ -4,9 +4,9 @@
     <div class="navbar navbar-large">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
-        <div class="title">ffvolley-news</div>
+        <div class="title">FFvolley Actus</div>
         <div class="title-large">
-          <div class="title-large-text">ffvolley-news</div>
+          <div class="title-large-text">FFvolley Actus</div>
         </div>
       </div>
     </div>
@@ -19,13 +19,37 @@
     </div> -->
     <!-- Scrollable page content-->
     <div class="page-content">
-      
+      ${!feeds.value && $h`
+        <div class="block block-strong-ios block-outline-ios text-align-center">
+          ${feedsLoading.value && $h`
+          <div class="preloader"></div>
+          `}
+          ${!feedsLoading.value && $h`
+          <a class="button button-round button-fill" @click=${loadFeeds}>Load Feeds</a>
+          `}
+        </div>
+        `}
+        ${feeds.value && $h`
+        <div class="list simple-list">
+          <ul>
+            ${feeds.value.map((feed) => $h`
+            <li>${feed}</li>
+            `)}
+          </ul>
+        </div>
+        `}
     </div>
   </div>
 </template>
 <script>
-export default (props, { $f7 }) => {
-  $f7.preloader.show();
+export default (props, { $f7, $store }) => {
+  
+  let feeds = $store.getters.feeds;
+  let feedsLoading = $store.getters.feedsLoading;
+  
+  function loadFeeds() {
+    $store.dispatch('loadFeeds');
+  }
 
   return $render;
 }

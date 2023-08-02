@@ -8,7 +8,6 @@ import 'framework7/css/bundle';
 import '../css/icons.css';
 import '../css/app.css';
 
-
 // Import Routes
 import routes from './routes.js';
 // Import Store
@@ -21,6 +20,7 @@ import App from '../app.f7';
 var app = new Framework7({
   name: 'ffvolley-news', // App name
   theme: 'auto', // Automatic theme detection
+  darkMode: true, // Enable dark mode
 
 
   el: '#app', // App root element
